@@ -65,14 +65,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	{
 		wager = parseFloat(document.getElementById("firstInputBox").value);
 		totalMoney += wager;
-		console.log("Total money = " winningWager);
+		return totalMoney
 	}
 
 	function losingWager()
 	{
 		wager = parseFloat(document.getElementById("firstInputBox").value);
 		totalMoney -= wager;
-		console.log("Total money = " winningWager);
+		return totalMoney
 	}
 	
 	function resetVariables()
@@ -201,7 +201,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		  <img id="winImg" src="https://www.nicepng.com/png/detail/230-2308537_clip-stock-empty-pocket-clipart-person-with-empty.png" width="80" alt="broke">
 	  </div>
   
-  <a class="w3-btn w3-black" onclick="losingWager();">Wanna see the damage?
+  <a class="w3-btn w3-black" onclick="losingWager();wagerFunction();">Wanna see the damage?
     <br>
     <img id="resultsButtonImg" src="https://i.imgur.com/rZOaHhx.png" width="30" alt="spongebob">
   </a>
