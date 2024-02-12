@@ -55,8 +55,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	function wagerFunction()
 	{
-		wager = parseFloat(document.getElementById("firstInputBox").value);
-		document.getElementById("endResults").innerHTML = "Your wagered: " + wager;
+		document.getElementById("endResults").innerHTML = "You now have: " + totalMoney;
 				
 		alert("You just bet " + wager  + " fictional money on a fictional coinflip... why?");
 		console.log("Wager of " + wager + " was accepted");
@@ -64,12 +63,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	function winningWager()
 	{
+		wager = parseFloat(document.getElementById("firstInputBox").value);
 		totalMoney += wager;
 		console.log("Total money = " winningWager);
 	}
 
 	function losingWager()
 	{
+		wager = parseFloat(document.getElementById("firstInputBox").value);
 		totalMoney -= wager;
 		console.log("Total money = " winningWager);
 	}
@@ -125,7 +126,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<h1>Gambling :)</h1>
 	</div>
 	
-	  <p>Choose between heads or tails and see if you're right</p>
+	  <p>Choose between heads or tails and see if you're right, you start with 100 money</p>
 	
 	  <a href="#one" class="w3-btn w3-grey w3-round">Get Started!</a>
 	
