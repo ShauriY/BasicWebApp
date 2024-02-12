@@ -36,21 +36,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <!--Javascript code.-->
 <script>
 	var exampleVariable1 = 0;
-	var exampleVariable2 = 0;
+	var totalMoney = 100;
 	var wager = 0;
 	var choice = "";
 	
-	function exampleFunction1()
-	{
-		// Assigns values to existing variables based on user input. The parseFloat() function converts string values to numerical values.
-    		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
-		
-		exampleVariable3 = exampleVariable1 + exampleVariable2;
-		
-		alert("You just ran an addition function!");
-		console.log("Addition function was run.");
-	}
+	
 	
 	function exampleFunction2()
 	{
@@ -63,21 +53,25 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		console.log("Multiplication function was run.");
 	}
 	
-	function exampleFunction3()
+	function wagerFunction()
 	{
-		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
-		
-		exampleVariable3 = exampleVariable1 ** exampleVariable2;
-		
-		alert("You just ran an exponent function!");
-		console.log("Exponent function was run.");
+		wager = parseFloat(document.getElementById("firstInputBox").value);
+		document.getElementById("endResults").innerHTML = "Your final result is: " + wager;
+				
+		alert("You just bet " + wager  + " fictional money on a fictional coinflip... why?");
+		console.log("Wager of " + wager + " was accepted");
 	}
 	
-	function exampleResultsFunction()
+	function winningWager()
 	{
-		document.getElementById("endResults").innerHTML = "Your final result is: " + wager*2;
-		resetVariables();
+		totalMoney += wager;
+		console.log("Total money = " winningWager);
+	}
+
+	function losingWager()
+	{
+		totalMoney -= wager;
+		console.log("Total money = " winningWager);
 	}
 	
 	function resetVariables()
@@ -161,8 +155,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<br><br><br>
 	</form>
   
-  <a href="#finalpage" onclick="chooseHeads();" class="w3-btn w3-grey">Heads</a>
-  <a href="#winpage" onclick="chooseTails();" class="w3-btn w3-grey">Tails</a>
+  <a href="#finalpage" onclick="chooseHeads(); wagerFunction();" class="w3-btn w3-grey">Heads</a>
+  <a href="#winpage" onclick="chooseTails(); wagerFunction();" class="w3-btn w3-grey">Tails</a>
     
   </center>
 </div>  
@@ -180,7 +174,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		  <img id="winImg" src="https://png.pngtree.com/png-vector/20230523/ourmid/pngtree-money-bag-vector-png-image_7106786.png" width="80" alt="money">
 	  </div>
   
-  <a class="w3-btn w3-black" onclick="exampleResultsFunction();">Click me!
+  <a class="w3-btn w3-black" onclick="winningWager();">Click me!
     <br>
     <img id="resultsButtonImg" src="https://i.imgur.com/rZOaHhx.png" width="30" alt="spongebob">
   </a>
@@ -206,11 +200,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		  <img id="winImg" src="https://www.nicepng.com/png/detail/230-2308537_clip-stock-empty-pocket-clipart-person-with-empty.png" width="80" alt="broke">
 	  </div>
   
-  <a class="w3-btn w3-black" onclick="exampleResultsFunction();">Click me for one more chance!
+  <a class="w3-btn w3-black" onclick="losingWager();">Wanna see the damage?
     <br>
     <img id="resultsButtonImg" src="https://i.imgur.com/rZOaHhx.png" width="30" alt="spongebob">
   </a>
-  <a href="#content" onclick="resetVariables();" class="w3-btn w3-black">Return to Home Page</a>
+  <a href="#content" onclick="resetVariables();" class="w3-btn w3-black">Click me for one more chance!</a>
     
   </center>
 </div>
