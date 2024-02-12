@@ -37,7 +37,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
 	var exampleVariable1 = 0;
 	var exampleVariable2 = 0;
-	var exampleVariable3 = 0;
+	var wager = 0;
 	var choice = "";
 	
 	function exampleFunction1()
@@ -76,7 +76,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	function exampleResultsFunction()
 	{
-		document.getElementById("endResults").innerHTML = "Your final result is: " + exampleVariable3;
+		document.getElementById("endResults").innerHTML = "Your final result is: " + wager*2;
 		resetVariables();
 	}
 	
@@ -156,7 +156,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<!--Label for first input field.-->
 		<label for="firstInputBox">Enter your wager:</label><br>
 		<!--User input box.-->
-		<input type="number" id="firstInputBox" value="0"><br>
+		<input type="number" id="firstInputBox" value=wager><br>
 		
 		<br><br><br>
 	</form>
@@ -177,7 +177,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     
 	  <div id="finalcontent" class="w3-container">
 		  <p id="endResults">"You Won! Tails never fails"</p>
-		  <img id="winImg" src="https://png.pngtree.com/png-vector/20230523/ourmid/pngtree-money-bag-vector-png-image_7106786.png" width="30" alt="money">
+		  <img id="winImg" src="https://png.pngtree.com/png-vector/20230523/ourmid/pngtree-money-bag-vector-png-image_7106786.png" width="80" alt="money">
 	  </div>
   
   <a class="w3-btn w3-black" onclick="exampleResultsFunction();">Click me!
@@ -202,10 +202,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   <center>
     
 	  <div id="finalcontent" class="w3-container">
-		  <p id="endResults">FINAL PAGE CONTENT GOES HERE</p>
+		  <p id="endResults">You... lost it all</p>
+		  <img id="winImg" src="https://www.nicepng.com/png/detail/230-2308537_clip-stock-empty-pocket-clipart-person-with-empty.png" width="80" alt="broke">
 	  </div>
   
-  <a class="w3-btn w3-black" onclick="exampleResultsFunction();">Click me!
+  <a class="w3-btn w3-black" onclick="exampleResultsFunction();">Click me for one more chance!
     <br>
     <img id="resultsButtonImg" src="https://i.imgur.com/rZOaHhx.png" width="30" alt="spongebob">
   </a>
