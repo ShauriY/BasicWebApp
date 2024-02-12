@@ -38,6 +38,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	var exampleVariable1 = 0;
 	var exampleVariable2 = 0;
 	var exampleVariable3 = 0;
+	var choice = "";
 	
 	function exampleFunction1()
 	{
@@ -84,6 +85,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		exampleVariable1 = 0;
 		exampleVariable2 = 0;
 		exampleVariable3 = 0;
+	}
+
+	function chooseHeads(){
+		choice = "heads";
+	}
+	function chooseTails(){
+		choice = "tails";
 	}
 </script>
   
@@ -146,20 +154,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<!--Form element. This allows for user input in HTML.-->
 	<form>
 		<!--Label for first input field.-->
-		<label for="firstInputBox">Enter a number:</label><br>
+		<label for="firstInputBox">Enter your name:</label><br>
 		<!--User input box.-->
 		<input type="number" id="firstInputBox" value="0"><br>
-		<!--Label for second input field.-->
-		<label for="secondInputBox">Enter another number:</label><br>
-		<!--User input box.-->
-		<input type="number" id="secondInputBox" value="0">
 		
 		<br><br><br>
 	</form>
       
-  <a href="#finalpage" onclick="exampleFunction1();" class="w3-btn w3-grey">Button 1</a>
-  <a href="#finalpage" onclick="exampleFunction2();" class="w3-btn w3-grey">Button 2</a>
-  <a href="#finalpage" onclick="exampleFunction3();" class="w3-btn w3-grey">Button 3</a>
+  <a href="#finalpage" onclick="chooseHeads();" class="w3-btn w3-grey">Heads</a>
+  <a href="#finalpage" onclick="chooseTails();" class="w3-btn w3-grey">Tails</a>
     
   </center>
 </div>  
